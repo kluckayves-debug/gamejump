@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import GameCanvas from './components/GameCanvas';
 import { GameOverScreen, PauseScreen, StartScreen, WinScreen } from './components/Overlays';
 import type { Phase, RunResult } from './game/constants';
@@ -253,6 +254,8 @@ export default function App() {
           touch={touch}
         />
       )}
+
+      <SpeedInsights />
     </div>
   );
 }
